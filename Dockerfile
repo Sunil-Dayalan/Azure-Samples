@@ -5,7 +5,7 @@ RUN mkdir /code
 WORKDIR /code
 
 
-COPY ./cosmosdb-with-fastapi /code
+COPY ./app /code
 
 RUN pip install fastapi
 
@@ -17,4 +17,4 @@ RUN pip install aiohttp
 
 RUN pip install azure-cosmos
 
-CMD ["uvicorn", "cosmosdb-with-fastapi.main:app", "--host=0.0.0.0", "--port=80"]
+CMD ["uvicorn", "main:app", "--host=0.0.0.0", "--port=80"]
