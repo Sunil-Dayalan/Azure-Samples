@@ -4,6 +4,7 @@ RUN mkdir /code
 
 WORKDIR /code
 
+EXPOSE 8000:8000
 
 COPY ./app /code
 
@@ -17,4 +18,4 @@ RUN pip install aiohttp
 
 RUN pip install azure-cosmos
 
-CMD ["uvicorn", "main:app", "--host=0.0.0.0", "--port=80"]
+CMD ["uvicorn", "main:app"]
