@@ -4,9 +4,9 @@ RUN mkdir /code
 
 WORKDIR /code
 
-EXPOSE 8000:8000
-
 COPY ./app /code
+
+EXPOSE 8000:8000
 
 RUN pip install fastapi
 
